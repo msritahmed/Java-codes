@@ -1,0 +1,35 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+public class Main {
+  public static boolean p(int a[])
+  {
+   // int a[]={1,2,5,4,3,0};
+    Arrays.sort(a);
+    int n=a.length;
+    if(a[n-1]==0)
+    {
+      return true;
+      
+    }
+    int c=0;
+    for(int i=n-2;i>=0;i--){
+      if(a[i]!=a[i+1])
+      c=n-1-i;
+      if(a[i]==c)
+      {
+        return true;
+      }
+    }
+    return false;
+
+  }
+  public static void main(String[] args) {
+    int a[]={1,2,5,4,3,0};
+    
+    //p(a);
+
+      System.out.println(p(a));
+  }
+}
