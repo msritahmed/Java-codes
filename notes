@@ -1,0 +1,18 @@
+	4. Bit manipulation
+	• Bitwise operators(&,|,~,^,<<,>>)
+	• Basic properties:
+	• Left shift-------->multiply 2^(n)------>1<<n
+	• Right shift-------->divide 2^(n)---->1>>n
+	• Overflow also occures only in left shift
+	• 1<<n=>2^n
+	• 1>>n=>1/(2^n)
+	• Power of Left Shift Operator:
+	→ To set ith bit
+	→ To Toggle ith Bit in a Number
+	• Check whether ith bit is set or not.
+	• Unset the ith bit of N if it is set.
+	• Given arr[N] where every element is present twice except one unique element. Find that unique element
+	• Approch1 ,2 
+	• SingleElement III
+	• Given on Array all Elements appear twice except two Elements Find those Elements
+	• Additional problem 1,2,3
