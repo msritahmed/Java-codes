@@ -1,0 +1,81 @@
+You are given an array A. Print the elements of the array using recursion.
+
+NOTE :
+You are required to not use any loops, You can create new functions.
+Don't change the signature of the function PrintArray.
+Print a new empty line after printing the output.
+
+
+Problem Constraints
+
+1 <= | A | <= 100
+-1000 <= A[i] <= 1000
+
+
+Input Format
+
+One line containing the array A
+
+
+Output Format
+
+Print the elements of the array in the sequential order.
+
+
+Example Input
+
+Input 1 :
+A = [6, -2, 5, 3]
+Input 2 :
+A = [1]
+
+
+Example Output
+
+Output 1 :
+6 -2 5 3 
+Output 2 :
+1 
+
+
+Example Explanation
+
+Print the elements in their order.  public class Solution {
+    public void PrintArray(int[] A) {
+    }
+}
+
+
+ChatGPT said:
+Here’s how you can solve this recursively in Java without changing the PrintArray function signature:
+
+java
+Copy
+Edit
+public class Solution {
+    public void PrintArray(int[] A) {
+        printHelper(A, 0);
+        System.out.println();
+    }
+
+    private void printHelper(int[] A, int index) {
+        if (index == A.length) {
+            return;
+        }
+        System.out.print(A[index] + " ");
+        printHelper(A, index + 1);
+    }
+}
+How it works:
+
+The PrintArray method just calls a helper function printHelper starting at index 0.
+
+printHelper prints the element at index and calls itself for index + 1.
+
+When index equals A.length, the recursion stops.
+
+The System.out.println(); in PrintArray ensures the final new line.
+
+✅ No loops used
+✅ Uses recursion only
+✅ Doesn’t change the PrintArray signature
