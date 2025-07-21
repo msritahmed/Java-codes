@@ -1,0 +1,22 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+public class Main {
+  public static void main(String[] args) {
+    int a[]={0,0,0,0,0,0,0};
+    int q[][]={{1,2},{3,4},{2,1}};
+    int n=a.length,m=q.length;
+
+    for(int i=0;i<m;i++)
+    {
+      int id=q[i][0];
+      int v=q[i][1];
+      a[id]+=v;
+    }
+    for(int i=1;i<n;i++)
+    {
+      a[i]=a[i-1]+a[i];
+    }
+    for(int i=0;i<n;i++)
+      System.out.print(a[i]+" ");
+  }
+}
