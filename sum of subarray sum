@@ -1,0 +1,22 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+public class Main {
+  public static void main(String[] args) {
+    int a[][]={{1,2,3},
+                {3,4,5},
+                {3,6,7}
+                };
+                int n=a.length;
+                int m=a[0].length;
+                int sum=0;
+
+                for(int i=0;i<n;i++)
+                {
+                  for(int j=0;j<m;j++)
+                  {
+                    sum=sum+a[i][j]*(i+1)*(j+1)*(n-i)*(m-j);
+                  }
+                }
+      System.out.println(sum);
+  }
+}
