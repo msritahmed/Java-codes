@@ -1,0 +1,34 @@
+// Do not write code to include libraries, main() function or accept any input from the console.
+// Initialization code is already written and hidden from you. Do not write code for it again.
+public class Solution {
+    public ArrayList<Integer> solve(ArrayList<Integer> A, ArrayList<Integer> B) {
+        // Just write your code below to complete the function. Required input is available to you as the function arguments.
+        // Do not print the result or any output. Just return the result via this function.
+        int n=A.size(),m=B.size();
+        HashMap<Integer,Integer> m1=new HashMap<>();
+
+        for(int i=0;i<n;i++)
+        {
+            if(m1.containsKey(A.get(i)))
+            {
+                m1.put( A.get(i) ,m1.get( A.get(i) ) +1 );
+            }
+            else
+            {
+                m1.put(A.get(i),1);
+            }
+
+        }
+        ArrayList<Integer> r=new ArrayList<>();
+        for(int i=0;i<m;i++)
+        {int e=B.get(i);
+            if( m1.containsKey(e) && m1.get(e)>0 )
+            {
+                r.add(e);
+                m1.put( e, m1.get(e)-1 );
+            }
+        }
+        return r;
+
+    }
+}
