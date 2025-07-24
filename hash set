@@ -1,0 +1,10 @@
+public class Solution {
+    public int solve(int[] A) {
+        HashSet<Integer> m=new HashSet<>();
+        for(int i=0;i<A.length;i++)
+        {
+            m.add(A[i]);
+        } 
+        return m.size();
+    }
+}
