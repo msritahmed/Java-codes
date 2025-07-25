@@ -1,0 +1,31 @@
+	• All Indices of Array:  Given an array A of size N and target integer B, return all indices where B is present in the array.
+//
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+public class Main {
+  public static int[] p(int a[],int b,int i,int c)
+  {
+    if(i==a.length)
+    {
+      return new int[c];
+    }
+    int r[];
+    if(a[i]==b)
+    {
+      r=p(a,b,i+1,c+1);
+      r[c]=i;
+    }
+    else
+    {
+      r=p(a,b,i+1,c);
+    }
+    return r;
+  }
+  public static void main(String[] args) {
+    int a[]={1,2,3,4,2,2,5,2};
+    int b=2;
+    int r[]=p(a,b,0,0);
+    for(int i=0;i<r.length;i++)
+    {System.out.println(r[i]);}
+  }
+}
