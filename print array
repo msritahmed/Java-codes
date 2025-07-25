@@ -1,0 +1,19 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+public class Main {
+  public static void p(int a[],int i)
+  {
+    if(i==a.length)
+    {
+      return;
+    }
+    System.out.print(a[i]+" ");
+    p(a,i+1);
+  }
+  public static void main(String[] args) {
+    int a[]={1,2,2,3,4,4,5};
+    p(a,0);
+
+      //System.out.println("Hello, World!");
+  }
+}
