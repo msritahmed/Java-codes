@@ -1,0 +1,6 @@
+	• Given N elements & Q queries. Find the frequency of elements provided in the query
+	• Count of distinct elements ----------------->2 approch
+	• Pair sum= given array and element K check if there exists a pair ( I,j) such that a[i]+a[j]=k and i!=j
+	• Approch 1,2
+	•  count pairs such that if there exists a pair ( I,j) such that a[i]+a[j]=k and i!=j
+	• All problem in assignments and additional
