@@ -1,0 +1,33 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+public class Main {
+  public static int p(int a[],int k)
+  {
+    int c=0;
+    HashMap<Integer,Integer>m=new HashMap<>();
+    for(int i=0;i<a.length;i++)
+    {
+      if(m.containsKey(k-a[i]))
+      {
+        c++;
+      }
+      if(m.containsKey(a[i]))
+      {
+        m.put(a[i],m.get(a[i])+1);
+      }
+      else
+      {
+        m.put(a[i],1);
+      }
+    }
+    return c;
+  }
+  public static void main(String[] args) {
+      int a[]={1,2,4,5,3,2,5,0,4};
+    int k=4;
+    
+      System.out.println(p(a,k));
+  }
+}
